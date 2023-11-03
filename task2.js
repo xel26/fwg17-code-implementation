@@ -16,7 +16,7 @@ const reverseWords = (kalimat) => {                                     // membu
         }
     }
 
-    kalimatReverse += kata                                              // REASSIGNMENT KONKATENASI kalimatReverse dengan kata yang berisi kata yang posisinya paling awal didalam kalimat
+    kalimatReverse += kata                                              // REASSIGNMENT KONKATENASI kalimatReverse dengan variable kata yang berisi kata yang posisinya paling awal didalam kalimat
     console.log(kalimatReverse)                                         // menampilkan kalimat yang sudah di balik urutan katanya
 }
 
@@ -39,7 +39,7 @@ const reverseWords = (kalimat) => {                                         // m
         return console.log("masukan lebih dari satu kata")
     }
 
-    let kalimatReverse = kalimat                                            // INISIALISASI kalimatReverse dengan inputan yang di eksekusi dengan metode chaining
+    const kalimatReverse = kalimat                                          // INISIALISASI kalimatReverse dengan inputan yang di eksekusi dengan metode chaining
                         .split(" ")                                         // membuat array baru dari string yg di pisah-pisah berdasarkan karakter spasi => ["Saya", "Belajar", "Javascript"]
                         .reverse()                                          // membalik urutan element-element dalam array => ["Javascript", "Belajar", "Saya"]
                         .join(" ")                                          // membuat string baru dari element-element array yg di KONKATENASI dan tiap element akan di pisah dengan karakter spasi => "Javascript Belajar Saya"

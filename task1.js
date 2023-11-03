@@ -100,13 +100,13 @@ cekPalindrom("MaLam", upperToLower)                                             
 // dengan built in function :
 {
 const cekPalindrom = (kata) => {                                    // membuat fungsi yang menerima satu parameter
-    if(typeof kata != "string"){                                    // metode guarding untuk memeriksa jika inputan bukan berupa string maka program akan dihentikan dan menampilkan pesan tersebut
+    if(typeof kata != "string" || kata.trim().includes(" ")){       // metode guarding untuk memeriksa jika inputan bukan berupa string atau terdapat lebih dari satu kata maka program akan dihentikan dan menampilkan pesan tersebut
         return console.log("masukan satu string kata")
     }
 
     const kataLowerCase = kata.toLowerCase()                        // mengubah kata menjadi lowercase => "RuMah" menjadi "rumah"
 
-    let kataReverse =                                               // INISIALISASI kataReverse
+    let kataReverse =                                               // INISIALISASI kataReverse dengan metode chaining
                       Array.from(kataLowerCase)                     // membuat array baru dari huruf-huruf di dalam string => ["r", "u", "m", "a", "h"]
                       .reverse()                                    // membalik urutan element-element dalam array => ["h", "a", "m", "u", "r"]
                       .join("")                                     // membuat string baru dari element-element array yang di KONKATENASI => "hamur"
@@ -118,5 +118,5 @@ const cekPalindrom = (kata) => {                                    // membuat f
     }
 }
 
-cekPalindrom("KatAk")                                               // memanggil fungsi cekPalindrom dan mengirim parameter string kata
+cekPalindrom(" KatAk ")                                               // memanggil fungsi cekPalindrom dan mengirim parameter string kata
 }
