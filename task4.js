@@ -14,12 +14,12 @@
         string += array                                         // hasil string-number di konkatenasi ke variable string =>  "55566914566956"
     })
 
-    const numbersWithout0 = Number(string)                      // mengubah type string menjadi type number => 55566914566956
-    console.log(numbersWithout0)                                // menampilkan hasil
+    console.log(Number(string))                                 // mengubah type string menjadi type number lalu menampilkan hasil=> 55566914566956                             
     }
 
     divideAndSort(5956560159466056)                             // memanggil fungsi dengan mengirim parameter number
 }
+
 
 
 
@@ -66,5 +66,5 @@
         console.log(string * true)                                                          // hasil akhir variable string di kali dengan TRUE agar tipe data STRING berubah jadi NUMBER => "55566914566956" menjadi 55566914566956
     }
   
-    divideAndSort(5956560159466056)                                                        // memanggil fungsi dengan mengirim parameter number
+    divideAndSort(5956560159466056)                                                         // memanggil fungsi dengan mengirim parameter number
 }
