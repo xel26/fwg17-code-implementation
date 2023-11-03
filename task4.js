@@ -56,7 +56,7 @@
         }
         arraySlice = [...arraySlice, slice]                                                 // hasil akhir arraySlice => ["595656", "159466", "56"]
 
-        let sortedString = ""                                                              // INISIALISASI sortedNumbers dengan ARRAY kosong. yg nantinya berisi numbers STRING yg sudah berurut
+        let sortedString = ""                                                               // INISIALISASI sortedNumbers dengan ARRAY kosong. yg nantinya berisi numbers STRING yg sudah berurut
 
         for(let i = 0; i < arraySlice.length; i++){                                         // melooping arraySlice yang berisi potongan-potongan STRING numbers
 
