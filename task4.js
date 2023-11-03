@@ -35,14 +35,14 @@
 //dengan Algoritma : belum efektif !!!
 {
     const divideAndSort = (numbers) => {                                                    // membuat fungsi yg menerima 1 parameter berisi nilai NUMBER
-        let stringNumbers = numbers + ""                                                    // merubah NUMBER menjadi STRING dengan cara menambahkan NUMBER dengan STRING kosong => "5956560159466056"
+        const stringNumbers = numbers + ""                                                  // merubah NUMBER menjadi STRING dengan cara menambahkan NUMBER dengan STRING kosong => "5956560159466056"
 
         let slice = []                                                                      // INISIALISASI slice dengan STRING kosong
         let string = ""                                                                     // INISIALISASI arraySlice dengan ARRAY kosong
 
         for(let i = 0; i <= stringNumbers.length; i++){                                     // melooping stringNumbers untuk mengambil tiap angka yang bertipe string dan mengambil satu index terakhir yg bernilai undefined
             if(stringNumbers[i] !== "0" && stringNumbers[i] !== undefined){                 // jika bukan angka 0 dan bukan undefined maka tiap angka yg bertipe STRING dikalikan dengna TRUE agar tipe menjadi NUMBER dan dan disimpan di variable slice => [5, 9, 5, 6, 5, 6]        
-                slice = [...slice, stringNumbers[i] * true]                                 // angka di ubah jadi tipe NUMBER untuk menghindari perbandingan berdasarkan urutan leksikografis karakter.
+                slice = [...slice, stringNumbers[i] * true]                                 // tujuan angka di ubah jadi tipe NUMBER adalah untuk menghindari perbandingan berdasarkan urutan leksikografis karakter.
 
             }else if(stringNumbers[i] === "0" || stringNumbers[i] === undefined){                                                                          
                 for(let x = 0; x < slice.length; x++){                                      // jika menemukan angka 0 atau undefined maka angka yang ada di slice akan di urutkan dengan bubble sort => [5, 5, 5, 6, 6, 9]
@@ -66,5 +66,5 @@
         console.log(string * true)                                                          // hasil akhir variable string di kali dengan TRUE agar tipe data STRING berubah jadi NUMBER => "55566914566956" menjadi 55566914566956
     }
   
-    divideAndSort(5956560159466065)    
+    divideAndSort(5956560159466056)                                                        // memanggil fungsi dengan mengirim parameter number
 }
