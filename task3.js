@@ -13,7 +13,7 @@ const fazzFood = (harga, voucher, jarak, pajak) => {                            
 
     let biayaAntar = 5000                                                               // INISIALISASI biayaAntar dengan nilai default 5000
     if(jarak > 2){                                                                      // jika jarak lebih dari 2 maka nilai biayaAntar akan di REASSIGNMENT dengan hasil perhitungan tersebut 
-        biayaAntar = (jarak - 2) * 3000 + 5000
+        biayaAntar = (jarak - 2) * 3000 + biayaAntar
     }
 
     let tambahanPajak = 0                                                               // INISIALISASI tambahanPajak dengan nilai default 0
